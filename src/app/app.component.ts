@@ -1,4 +1,4 @@
-import { LoginServiceService } from './login-service.service';
+
 import { Component, OnInit} from '@angular/core';
 
 
@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
   // heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
 
 
-  constructor(private _loginService : LoginServiceService) {
-    this._loginService.signIn();
-  }
+  constructor() {}
 
 
   ngOnInit() {
