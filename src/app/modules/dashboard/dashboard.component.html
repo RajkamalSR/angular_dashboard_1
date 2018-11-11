@@ -26,7 +26,7 @@
 
 	<section class="side-navbar">
 		<div class="tootlbar-header">
-			<ul class="no-styles un-list btn-flex">
+			<ul class="no-styles un-list btn-flex btn-icon-list">
 				<li>
 					<button class="btn btn-sm btn" id="hideTablebar"><i class="material-icons icon-30">list</i></button>
 				</li>
@@ -39,12 +39,18 @@
 
 	<section class="tablebar" id="tablebar">
 		<div class="tootlbar-header">
-			<ul class="no-styles un-list btn-flex">
+			<ul class="no-styles un-list btn-flex toolbar-list btn-icon-list">
 				<li>
 					<button class="btn btn-sm btn" id="hideTablebar"><i class="material-icons icon-30">list</i></button>
 				</li>
 				<li>
 					<a href="javascript:void(0)" class="title">Title</a>
+				</li>
+			</ul>
+
+			<ul class="no-styles un-list btn-flex toolbar-list pull-right">
+				<li>
+					<a href="javascript:void(0)" class="a-button">Sort by Date</a>
 				</li>
 			</ul>
 		</div>
@@ -94,7 +100,7 @@
 					</li>
 
 					<li>
-						<a href="javascript:void(0)" class="title">Dashboard</a>
+						<a href="javascript:void(0)" class="title">Inbox</a>
 					</li>
 				</ul>
 			</div>
@@ -113,12 +119,56 @@
 							<button class="btn btn-sm"><i class="material-icons icon-30">save</i></button>
 						</li>
 						<li>
-							<a href="javascript:void(0)" class="title">Documents</a>
+							<a href="javascript:void(0)" class="title">Subject</a>
 						</li>
 					</ul>
 				</div>
 
-				<table class="table table-striped">
+				<div class="email-wrapper">
+					<div class="email-fields">
+						<div class="e-label-field">
+							<label for="#mailTo">To</label>
+						</div>
+						<div class="e-input-field">
+							<input type="text" placeholder="To" class="form-control" id="mailTo">
+							<span class="error">Not a receipent</span>
+						</div>
+					</div>
+					<div class="email-fields">
+						<div class="e-label-field">
+							<label for="#mailTo">From</label>
+						</div>
+						<div class="e-input-field">
+							<input type="text" placeholder="To" class="form-control" id="mailTo">
+						</div>
+					</div>
+					<div class="email-fields">
+						<div class="e-label-field">
+							<label for="#mailTo">Subject</label>
+						</div>
+						<div class="e-input-field">
+							<input type="text" placeholder="To" class="form-control" id="mailTo">
+						</div>
+					</div>
+					<div class="email-fields">
+						<div class="e-label-field">
+							<label for="#mailTo">Cc</label>
+						</div>
+						<div class="e-input-field">
+							<input type="text" placeholder="To" class="form-control" id="mailTo">
+						</div>
+					</div>
+					<div class="email-fields">
+						<div class="e-label-field">
+							<label for="#mailTo">Bcc</label>
+						</div>
+						<div class="e-input-field">
+							<input type="text" placeholder="To" class="form-control" id="mailTo">
+						</div>
+					</div>
+				</div>
+
+				<!-- <table class="table table-striped">
 					<thead>
 						<tr>
 							<th>Firstname</th>
@@ -143,9 +193,9 @@
 							<td>july@example.com</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> -->
 
-				<app-calendar></app-calendar>
+				<!-- <app-calendar></app-calendar> -->
 			</div>
 		</div>
 
@@ -154,7 +204,7 @@
 
 		<div class="col-md-3" id="rightbar">
 			<div class="tootlbar-header">
-				<ul class="no-styles un-list btn-flex">
+				<ul class="no-styles un-list btn-flex btn-icon-list">
 					<li>
 						<button class="btn btn-sm"><i class="material-icons icon-30">list</i></button>
 					</li>
