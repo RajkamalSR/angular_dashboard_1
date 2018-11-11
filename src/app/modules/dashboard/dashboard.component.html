@@ -1,4 +1,41 @@
+<header class="header bg-blue fixed-top">
+	<div class="container-fluid">
+		<div class="navigation-menu">
+			<div class="logo">
+				<a href="#" class="brand__logo">Ofis Ace</a>
+			</div>
+
+			<div class="main-menu">
+				<ul class="menu-list">
+					<li>
+						<a href="/home">Home</a>
+					</li>
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+					<li>
+						<a href="/settings">Settings</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
 <div class="main-wrapper">
+
+	<section class="side-navbar">
+		<div class="tootlbar-header">
+			<ul class="no-styles un-list btn-flex">
+				<li>
+					<button class="btn btn-sm btn" id="hideTablebar"><i class="material-icons icon-30">list</i></button>
+				</li>
+				<li>
+					<a href="javascript:void(0)" class="title">Title</a>
+				</li>
+			</ul>
+		</div>
+	</section>
 
 	<section class="tablebar" id="tablebar">
 		<div class="tootlbar-header">
@@ -7,7 +44,7 @@
 					<button class="btn btn-sm btn" id="hideTablebar"><i class="material-icons icon-30">list</i></button>
 				</li>
 				<li>
-					<a href="">Title</a>
+					<a href="javascript:void(0)" class="title">Title</a>
 				</li>
 			</ul>
 		</div>
@@ -43,14 +80,21 @@
 
 
 
-		<div class="col-lg-9 col-md-6" id="maincontent">
+		<div class="col-md-9" id="maincontent">
 			<div class="tootlbar-header">
-				<ul class="no-styles un-list btn-flex">
+				<ul class="no-styles un-list toolbar-list btn-flex btn-icon-list">
 					<li>
 						<button class="btn btn-sm"><i class="material-icons icon-30">list</i></button>
 					</li>
+				</ul>
+
+				<ul class="no-styles un-list toolbar-list btn-flex ">
 					<li>
-						<a href="javascript:void(0)">Dashboard</a>
+						<button class="btn btn-sm btn-round btn-important">Compose</button>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" class="title">Dashboard</a>
 					</li>
 				</ul>
 			</div>
@@ -58,7 +102,7 @@
 			<div class="content">
 
 				<div class="tootlbar-header toolbar-padding">
-					<ul class="no-styles un-list btn-flex">
+					<ul class="no-styles un-list btn-flex btn-icon-list">
 						<li>
 							<button class="btn btn-sm"><i class="material-icons icon-30">close</i></button>
 						</li>
@@ -69,7 +113,7 @@
 							<button class="btn btn-sm"><i class="material-icons icon-30">save</i></button>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Documents</a>
+							<a href="javascript:void(0)" class="title">Documents</a>
 						</li>
 					</ul>
 				</div>
@@ -108,19 +152,21 @@
 
 
 
-		<div class="col-lg-3 col-md-6" id="rightbar">
+		<div class="col-md-3" id="rightbar">
 			<div class="tootlbar-header">
 				<ul class="no-styles un-list btn-flex">
 					<li>
 						<button class="btn btn-sm"><i class="material-icons icon-30">list</i></button>
 					</li>
 					<li>
-						<a href="javascript:void(0)">Metadata</a>
+						<a href="javascript:void(0)" class="title">Metadata</a>
 					</li>
 				</ul>
 			</div>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-				dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+				standard
+				dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+				specimen
 				book.
 			</p>
 		</div>

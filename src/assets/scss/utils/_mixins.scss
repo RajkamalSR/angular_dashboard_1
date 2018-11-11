@@ -82,3 +82,11 @@ $browser-context: 14; // Default
     display: $flex;
     justify-content: $justifycontent;
 }
+
+@mixin sidebar($width){
+    width: $width;
+    border-right: 3px solid #f9f9f9;
+    padding-right: 3px;
+    max-height: calc(100vh - 52px);
+    overflow-y: auto;
+}
