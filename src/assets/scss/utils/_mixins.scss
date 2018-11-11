@@ -41,12 +41,7 @@
     }
 }
 
-/// UL list style
-@mixin listmodel($marg, $padd){
-    margin: $marg;
-    padding: $padd;
-    list-style-type: none;
-}
+
 
 //BUTON DEFAULT
 @mixin btn-default($width, $height){
@@ -71,19 +66,7 @@
     white-space: nowrap;
 }
 
-//FORM INPUT
 
-@mixin form-input($width, $font-size ){
-    width: $width;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 1px solid #CACACA;
-    padding-left: 0px;
-    line-height: 16px;
-    padding: 0;
-    font-size: $font-size;
-    box-shadow: none;
-}
 
 
 
@@ -94,17 +77,8 @@ $browser-context: 14; // Default
   @return #{$pixels/$context}em;
 }
 
-//FORM CONTROL WITHOU GROUP
 
-@mixin formcontrol-input($width, $lineheight, $height){
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid #000;
-    border-radius: 0;
-    line-height: $lineheight;
-    height: $height;
-    border-bottom: 1px solid #CACACA;
-    width: $width;
-    color: $black ;
+@mixin d-flex($flex, $justifycontent){
+    display: $flex;
+    justify-content: $justifycontent;
 }

@@ -1,33 +1,39 @@
-@import './assets/scss/utils/variables';
-.btn{
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    background: $white;
-    &:active{
-        @extend %boxshadow;
-    }
-    @include modifier('active') {
-        font-weight: bold;
-    }
+@import "./assets/scss/utils/variables";
+.btn {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  background: $white;
 
-    @include element('fixedwidth') {
-        width: 100px;
-    }
-
-    @include element('black') {
-        background: $black;
-        color: $white;
-        &:hover{
-            background: $black;
-            color: $white;  
-        }
-    }
+  @include element("submit") {
+    width: 100%;
+    background: $btn-blue;
+    border: 0;
+    border-radius: 2px;
+  }
 }
 
-.btn-hidden{
-    height: 1px;
-    width:1px;
-    opacity: 0;
-    visibility: hidden;
+.form {
+  @include element("buttons") {
+	@include d-flex(flex, space-evenly);
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    > .btn.btn-primary {
+      flex: 1;
+      margin: 0 4px;
+    }
+
+    > .btn.btn-primary:first-child {
+      margin-left: 0 !important;
+    }
+
+    > .btn.btn-primary:last-child {
+      margin-right: 0 !important;
+    }
+  }
 }
