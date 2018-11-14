@@ -13,6 +13,8 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 // import "tinymce/plugins/charmap";
 // declare var tinymce: any;
 
+
+
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -20,6 +22,8 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 })
 export class DashboardComponent implements OnInit {
   constructor() {}
+  public maincontent : boolean = false;
+  public navoverlay : boolean = false;
 
   ngOnInit() {
     //this.tinyMceInit();
@@ -34,5 +38,15 @@ export class DashboardComponent implements OnInit {
     //   height: 200,
     //   toolbar: `formatselect | undo redo | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | insert | help`
     // });
+  }
+
+  public toggle(container){
+    if(container == 'm'){
+        this.maincontent = !this.maincontent;
+    }
+
+    if(container == 'n-o'){
+      this.navoverlay = !this.navoverlay;
+    }
   }
 }

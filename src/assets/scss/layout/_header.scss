@@ -66,6 +66,7 @@ body {
 
 .tablebar {
     @include sidebar(242px);
+    flex:1;
 }
 
 .side-navbar{
@@ -144,9 +145,12 @@ ul.un-list {
 }
 
 .content {
-  flex: 1;
   max-height: calc(100vh - 52px);
   overflow-y: auto;
+}
+
+.content.flex-4{
+  flex:4;
 }
 
 #showSidebar {
@@ -194,9 +198,7 @@ ul.un-list {
     max-width: 65%;
     flex: 0 0 65%;
   }
-  #tablebar {
-    display: none;
-  }
+
   #showtableBar {
     display: block;
   }
@@ -372,4 +374,31 @@ ul.un-list {
 
 .mce-tinymce.mce-container.mce-panel{
   width:calc(100% - 15px) !important;
+}
+
+.mce-panel{
+  border: 1px solid #e9e9e9 !important;
+}
+
+.para-1{
+  padding:0 15px;
+  margin:8px 0;
+  line-height: 1.5rem;
+}
+
+.b-navbar-overlay{
+  display: none !important;
+}
+
+@media screen and (max-width:1365px){
+  .side-navbar{
+    display: none;
+  }
+  .b-navbar-overlay{
+    display: flex !important;
+  }
+}
+
+.d-block{
+  display: block !important;
 }
