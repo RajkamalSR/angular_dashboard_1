@@ -19,6 +19,7 @@ a:hover{
   align-items: center;
   &.bg-blue {
     background-image: linear-gradient(to right, #6a11cb 0%, #5853ea 100%);
+    //background-image: linear-gradient(to top, #284e92 0%, #295095 1%, #2a5298 100%);
     color: $white;
   }
   &.fixed-top {
@@ -272,6 +273,8 @@ ul.un-list {
 
 .brand__logo {
   color: $white;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .menu-list {
@@ -294,7 +297,7 @@ ul.un-list {
 }
 
 .main-menu {
-  padding-left: 72px;
+  padding-left: 180px;
 }
 
 .menu-list li a {
@@ -322,6 +325,7 @@ ul.un-list {
         margin-bottom: 4px;
     }
 
+
     .e-label-field{
         flex: 1;
         text-align: right;
@@ -330,6 +334,17 @@ ul.un-list {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+
+        .material-icons:before{
+          content: '';
+          display: inline-block;
+        }
+
+        .material-icons:before, label{
+          vertical-align: middle;
+          font-size: 12px !important;
+          line-height: 1;
+        }
     }
 
     .e-input-field{
@@ -352,4 +367,9 @@ ul.un-list {
     padding: 4px 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+
+.mce-tinymce.mce-container.mce-panel{
+  width:calc(100% - 15px) !important;
 }

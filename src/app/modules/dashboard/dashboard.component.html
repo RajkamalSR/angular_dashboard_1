@@ -2,10 +2,10 @@
 	<div class="container-fluid">
 		<div class="navigation-menu">
 			<div class="logo">
-				<a href="#" class="brand__logo">Ofis Ace</a>
+				<a href="#" class="brand__logo">Office CRM</a>
 			</div>
 
-			<div class="main-menu">
+			<nav class="main-menu">
 				<ul class="menu-list">
 					<li>
 						<a href="/home">Home</a>
@@ -17,7 +17,7 @@
 						<a href="/settings">Settings</a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 	</div>
 </header>
@@ -41,7 +41,7 @@
 		<div class="tootlbar-header">
 			<ul class="no-styles un-list btn-flex toolbar-list btn-icon-list">
 				<li>
-					<button class="btn btn-sm btn" id="hideTablebar"><i class="material-icons icon-30">list</i></button>
+					<button class="btn btn-sm btn"><i class="material-icons icon-30">list</i></button>
 				</li>
 				<li>
 					<a href="javascript:void(0)" class="title">Title</a>
@@ -57,7 +57,7 @@
 		<div class="list list-stripped">
 			<div class="list-items align-center">
 				<div class="list-thumbnail">
-					<img src="./assets/images/avatar/2.png" class="img-sm">
+					<img src="./assets/images/avatar/2.png" alt="user-image" class="img-sm">
 				</div>
 				<div class="list-body">
 					list body
@@ -65,7 +65,7 @@
 			</div>
 			<div class="list-items align-center">
 				<div class="list-thumbnail">
-					<img src="./assets/images/avatar/2.png" class="img-sm">
+					<img src="./assets/images/avatar/2.png" alt="user-image" class="img-sm">
 				</div>
 				<div class="list-body">
 					list body
@@ -73,7 +73,7 @@
 			</div>
 			<div class="list-items align-center">
 				<div class="list-thumbnail">
-					<img src="./assets/images/avatar/2.png" class="img-sm">
+					<img src="./assets/images/avatar/2.png" alt="user-image" class="img-sm">
 				</div>
 				<div class="list-body">
 					list body
@@ -82,7 +82,7 @@
 		</div>
 	</section>
 
-	<section class="content">
+	<main class="content">
 
 
 
@@ -127,7 +127,7 @@
 				<div class="email-wrapper">
 					<div class="email-fields">
 						<div class="e-label-field">
-							<label for="#mailTo">To</label>
+							<label for="mailTo">To</label>
 						</div>
 						<div class="e-input-field">
 							<input type="text" placeholder="To" class="form-control" id="mailTo">
@@ -136,37 +136,39 @@
 					</div>
 					<div class="email-fields">
 						<div class="e-label-field">
-							<label for="#mailTo">From</label>
+							<label for="cc">Cc</label>
 						</div>
 						<div class="e-input-field">
-							<input type="text" placeholder="To" class="form-control" id="mailTo">
+							<input type="text" placeholder="To" class="form-control" id="cc">
 						</div>
 					</div>
 					<div class="email-fields">
 						<div class="e-label-field">
-							<label for="#mailTo">Subject</label>
+							<label for="bcc">Bcc</label>
 						</div>
 						<div class="e-input-field">
-							<input type="text" placeholder="To" class="form-control" id="mailTo">
+							<input type="text" placeholder="To" class="form-control" id="bcc">
 						</div>
 					</div>
 					<div class="email-fields">
 						<div class="e-label-field">
-							<label for="#mailTo">Cc</label>
+							<label for="subject">Subject</label>
 						</div>
 						<div class="e-input-field">
-							<input type="text" placeholder="To" class="form-control" id="mailTo">
+							<input type="text" placeholder="To" class="form-control" id="subject">
 						</div>
 					</div>
 					<div class="email-fields">
 						<div class="e-label-field">
-							<label for="#mailTo">Bcc</label>
+							<i class="material-icons">attach_file</i>
+							<label for="attach">Attach</label>
 						</div>
 						<div class="e-input-field">
-							<input type="text" placeholder="To" class="form-control" id="mailTo">
+							<input type="file" placeholder="To" class="form-control" id="attach">
 						</div>
 					</div>
 				</div>
+				<editor apiKey="test" [init]="{plugins: 'link'}"></editor>
 
 				<!-- <table class="table table-striped">
 					<thead>
@@ -220,5 +222,5 @@
 				book.
 			</p>
 		</div>
-	</section>
+	</main>
 </div>
