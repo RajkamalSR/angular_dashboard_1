@@ -24,6 +24,11 @@ export class DashboardComponent implements OnInit {
   constructor() {}
   public maincontent : boolean = false;
   public navoverlay : boolean = false;
+  public mobileConfigToggle : Object = {
+    navbar:false,
+    tablebar:true,
+    maincontent:false,
+  };
 
   ngOnInit() {
     //this.tinyMceInit();
@@ -47,6 +52,26 @@ export class DashboardComponent implements OnInit {
 
     if(container == 'n-o'){
       this.navoverlay = !this.navoverlay;
+    }
+
+    if(container == 'm-mc'){
+     this.maincontent = true;
+     this.mobileConfigToggle = {
+       navbar:false,
+       tablebar:false,
+       maincontent:true,
+     }
+
+     console.log(this.mobileConfigToggle)
+    }
+
+    if(container == 'm-tb'){
+      this.maincontent = false;
+      this.mobileConfigToggle = {
+        navbar:false,
+        tablebar:true,
+        maincontent:false,
+      }
     }
   }
 }

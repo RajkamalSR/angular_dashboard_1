@@ -5,7 +5,11 @@
         <a href="#" class="brand__logo">Office CRM</a>
       </div>
 
-      <nav class="main-menu">
+      <div class="hambrger-icon hide-desktop">
+        <button type="button" class="btn btn-sm btn-transparent"><i class="material-icons">menu</i></button>
+      </div>
+
+      <nav class="main-menu hide-mobile">
         <ul class="menu-list">
           <li>
             <a href="/home">Home</a>
@@ -24,7 +28,7 @@
 
 <div class="main-wrapper">
 
-  <section class="side-navbar" [class.d-block]="navoverlay">
+  <section class="side-navbar" id="navbar" [class.d-block]="navoverlay">
     <div class="tootlbar-header">
       <ul class="no-styles un-list btn-flex btn-icon-list">
         <li *ngIf="navoverlay">
@@ -40,7 +44,7 @@
     </div>
   </section>
 
-  <section class="tablebar" id="tablebar">
+  <section class="tablebar" id="tablebar" *ngIf="mobileConfigToggle.tablebar">
     <div class="tootlbar-header">
       <ul class="no-styles un-list btn-flex toolbar-list btn-icon-list">
         <li *ngIf="!navoverlay">
@@ -61,7 +65,11 @@
         </li>
 
         <li *ngIf="!maincontent && !navoverlay">
-          <a href="javascript:void(0)" class="a-button" (click)="toggle('m')">Show maincontent</a>
+          <a href="javascript:void(0)" class="a-button hide-mobile" (click)="toggle('m')">Show maincontent</a>
+        </li>
+
+        <li>
+          <a href="javascript:void(0)" class="a-button hide-desktop" (click)="toggle('m-mc')">Show maincontent</a>
         </li>
       </ul>
     </div>
@@ -93,12 +101,15 @@
     </div>
   </section>
 
-  <main class="content flex-4" *ngIf="maincontent">
+  <main class="content flex-4" *ngIf="maincontent" [class.display-none]="mobileConfigToggle.maincontent">
 
     <div class="col-md-9" id="maincontent">
       <div class="tootlbar-header">
         <ul class="no-styles un-list toolbar-list btn-flex btn-icon-list">
-          <li>
+          <li class="hide-desktop">
+            <button class="btn btn-sm" (click)="toggle('m-tb')"><i class="material-icons icon-30">list</i></button>
+          </li>
+          <li class="hide-mobile">
             <button class="btn btn-sm" (click)="toggle('m')"><i class="material-icons icon-30">list</i></button>
           </li>
         </ul>
