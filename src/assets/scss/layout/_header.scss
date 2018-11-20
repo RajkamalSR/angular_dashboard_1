@@ -112,6 +112,17 @@ body {
         &.align-center {
             align-items: center;
         }
+        &.align-top {
+            align-items: top;
+        }
+        &.active{
+            background: #7457ba !important;
+            color: rgb(255, 255, 255);
+        }
+    }
+    
+    .list-body {
+        padding-left: 8px;
     }
     .list-thumbnail {
         padding: 0 5px;
@@ -121,10 +132,14 @@ body {
             background: #f9f9f9;
         }
     }
+    h4,
+    p {
+        margin-bottom: 4px;
+    }
 }
 
 .img-sm {
-    width: 32px;
+    width: 24px;
 }
 
 .img-logo {
@@ -140,6 +155,11 @@ body {
     .toolbar-list {
         float: left;
     }
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .btn-shadow {
@@ -239,6 +259,10 @@ ul.un-list {
     }
 }
 
+.icon-active{
+    color : #6a11cb !important;
+}
+
 .table td,
 .table th {
     padding: 0.2rem;
@@ -262,7 +286,7 @@ ul.un-list {
 }
 
 .toolbar-padding {
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .brand__logo {
@@ -288,6 +312,16 @@ ul.un-list {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.p-lr-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.container.p-lr-5 {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .main-menu {

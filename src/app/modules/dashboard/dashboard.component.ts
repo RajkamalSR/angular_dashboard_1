@@ -1,4 +1,6 @@
+import { EmailService } from './../../services/email.service';
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+
 // import "tinymce";
 // import "tinymce/themes/modern";
 // import "tinymce/plugins/table";
@@ -13,25 +15,33 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 // import "tinymce/plugins/charmap";
 // declare var tinymce: any;
 
-
-
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
-  public maincontent : boolean = false;
-  public navoverlay : boolean = false;
-  public mobileConfigToggle : Object = {
-    navbar:false,
-    tablebar:true,
-    maincontent:false,
+  constructor(public emailService:EmailService) {}
+  public maincontent: boolean = false;
+  public navoverlay: boolean = false;
+  public isFavorite: boolean;
+  public emailList : Array<Object>;
+  public postList : any;
+  public postsList :any;
+  public mobileConfigToggle: any = {
+    navbar: false,
+    tablebar: true,
+    maincontent: false
   };
 
   ngOnInit() {
     //this.tinyMceInit();
+    this.isFavorite = false;
+    this.getEmailDetails();
+    this.emailService.emailList.subscribe((res) => {
+      this.postList = JSON.stringify(res);
+    });
+    console.log(this.postList);
   }
 
   private tinyMceInit(): void {
@@ -45,33 +55,45 @@ export class DashboardComponent implements OnInit {
     // });
   }
 
-  public toggle(container){
-    if(container == 'm'){
-        this.maincontent = !this.maincontent;
+  public toggle(container) {
+    if (container == "m") {
+      this.maincontent = !this.maincontent;
     }
 
-    if(container == 'n-o'){
+    if (container == "n-o") {
       this.navoverlay = !this.navoverlay;
     }
 
-    if(container == 'm-mc'){
-     this.maincontent = true;
-     this.mobileConfigToggle = {
-       navbar:false,
-       tablebar:false,
-       maincontent:true,
-     }
+    if (container == "m-mc") {
+      this.maincontent = true;
+      this.mobileConfigToggle = {
+        navbar: false,
+        tablebar: false,
+        maincontent: true
+      };
 
-     console.log(this.mobileConfigToggle)
+      console.log(this.mobileConfigToggle);
     }
 
-    if(container == 'm-tb'){
+    if (container == "m-tb") {
       this.maincontent = false;
       this.mobileConfigToggle = {
-        navbar:false,
-        tablebar:true,
-        maincontent:false,
-      }
+        navbar: false,
+        tablebar: true,
+        maincontent: false
+      };
     }
+  }
+
+  public getEmailDetails(){
+    this.emailList = this.emailService.getEmailList();
+      this.emailService.getPosts().subscribe((res) => {
+      this.postsList = res;
+    });
+    //console.log(this.postsList, 'dfgdffffffffffffffff')
+  }
+
+  public onFavoriteChanged() : void {
+    console.log("Favorite changed");
   }
 }
