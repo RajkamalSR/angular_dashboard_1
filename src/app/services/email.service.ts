@@ -18,21 +18,24 @@ export class EmailService {
         subject: "Lorem ipsum is a dummy text",
         content:
           "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-        userimage: "./assets/images/avatar/1.png"
+        userimage: "./assets/images/avatar/1.png",
+        read: false
       },
       {
         id: 2,
         subject: "Lorem ipsum is a dummy text",
         content:
           "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-        userimage: "./assets/images/avatar/2.png"
+        userimage: "./assets/images/avatar/2.png",
+        read: true
       },
       {
         id: 3,
         subject: "Lorem ipsum is a dummy text",
         content:
           "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-        userimage: "./assets/images/avatar/3.png"
+        userimage: "./assets/images/avatar/3.png",
+        read: true
       }
     ];
   }

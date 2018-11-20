@@ -106,6 +106,7 @@ body {
 }
 
 .list {
+    overflow-x: hidden;
     .list-items {
         display: flex;
         padding: 5px;
@@ -118,11 +119,21 @@ body {
         &.active{
             background: #7457ba !important;
             color: rgb(255, 255, 255);
+            h4{
+                font-weight: bold;
+            }
+        }
+
+        &.read{
+            h4{
+                font-weight: bold;
+            }
         }
     }
     
     .list-body {
         padding-left: 8px;
+        width:100%;
     }
     .list-thumbnail {
         padding: 0 5px;
@@ -135,6 +146,16 @@ body {
     h4,
     p {
         margin-bottom: 4px;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 40px);
+        display: inline-block;
     }
 }
 

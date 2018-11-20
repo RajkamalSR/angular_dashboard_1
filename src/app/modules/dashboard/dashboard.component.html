@@ -78,7 +78,7 @@
       </ul>
     </div>
     <div class="list list-stripped">
-      <div class="list-items align-top" *ngFor="let emaillist of emailList">
+      <div class="list-items align-top" [class.read]="!emaillist.read" *ngFor="let emaillist of emailList">
         <div class="list-thumbnail">
           <img [src]="emaillist.userimage" alt="user-image" class="img-sm">
         </div>
