@@ -109,7 +109,7 @@ body {
     overflow-x: hidden;
     .list-items {
         display: flex;
-        padding: 5px;
+        padding: 10px 15px;
         &.align-center {
             align-items: center;
         }
@@ -160,7 +160,7 @@ body {
 }
 
 .img-sm {
-    width: 24px;
+    width: 32px;
 }
 
 .img-logo {
@@ -488,6 +488,9 @@ ul.un-list {
         height: 100%;
         background: #fff;
         border: 1px solid #ccc;
+        padding: 0;
+        top: 51px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
     .email-wrapper {
         padding: 10px 0;
