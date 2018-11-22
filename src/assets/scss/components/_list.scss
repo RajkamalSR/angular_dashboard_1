@@ -1,5 +1,17 @@
 .list {
     overflow-x: hidden;
+    &.list-md{
+        h4{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+
+        .img-md{
+            width:54px;
+        }
+    }
     .list-items {
         display: flex;
         padding: 10px 15px;
@@ -10,8 +22,8 @@
             align-items: top;
         }
         &.active{
-            background: #7457ba !important;
-            color: rgb(255, 255, 255);
+            border-left: 4px solid #6915cd;
+            border-radius: 4px;
             h4{
                 font-weight: bold;
             }

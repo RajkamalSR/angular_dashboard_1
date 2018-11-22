@@ -9,7 +9,17 @@
     max-height: calc(100vh - 52px);
     overflow-y: auto;
 }
-
-.content.flex-4 {
+.flex-4 {
     flex: 4;
+}
+
+.flex-1{
+    flex:1;
+}
+
+.flex-c-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
 }

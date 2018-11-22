@@ -142,6 +142,10 @@ html input[disabled]{
 .height-50{
     height: calc(100% - 50%);
 }
+
+.bdr-bt-1{
+    border-bottom: 1px solid #dedede;
+}
 @media screen and (max-width:1023px){
     .overlay-backdrop {
         background: rgba(0, 0, 0, 0.151);

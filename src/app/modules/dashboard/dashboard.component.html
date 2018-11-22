@@ -82,9 +82,9 @@
       </ul>
     </div>
     <div class="list list-stripped">
-      <div class="list-items align-top" [class.read]="!emaillist.read" *ngFor="let emaillist of emailList">
+      <div class="list-items align-top" [class.active]="emaillist.id == 1" [class.read]="!emaillist.read" *ngFor="let emaillist of emailList">
         <div class="list-thumbnail">
-          <img [src]="emaillist.userimage" alt="user-image" class="img-sm">
+          <img [src]="emaillist.userimage" alt="user-image" class="img-md">
         </div>
         <div class="list-body">
           <h4 class="heading-2" [innerHTML]="emaillist.subject"></h4>
@@ -120,6 +120,22 @@
 
       <div class="content">
 
+        <!-- <div class="tootlbar-header toolbar-padding">
+          <ul class="no-styles un-list btn-flex btn-icon-list">
+            <li>
+              <button class="btn btn-sm"><i class="material-icons icon-30">close</i></button>
+            </li>
+            <li>
+              <button class="btn btn-sm"><i class="material-icons icon-30">edit</i></button>
+            </li>
+            <li>
+              <button class="btn btn-sm"><i class="material-icons icon-30">save</i></button>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="title">Subject</a>
+            </li>
+          </ul>
+        </div> -->
         <div class="tootlbar-header toolbar-padding">
           <ul class="no-styles un-list btn-flex btn-icon-list">
             <li>
@@ -137,7 +153,31 @@
           </ul>
         </div>
 
-        <div class="email-wrapper">
+
+        <div class="dp-flex bdr-bt-1">
+          <div class="flex-4">
+            <div class="list list-md">
+              <div class="list-items align-top">
+                <div class="list-thumbnail">
+                  <img src="./assets/images/avatar/2.png" alt="user-image" class="img-md">
+                </div>
+                <div class="list-body">
+                  <h4 class="heading-2">Alexander Pierce</h4>
+                  <p>Grapic designer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 flex-c-buttons">
+            <a href="javascript:void(0)" class="a-button btn-important">Ready For Approval</a>
+            <a href="javascript:void(0)" class="a-button">Reject</a>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="email-wrapper">
           <div class="email-fields">
             <div class="e-label-field">
               <label for="mailTo">To</label>
@@ -181,11 +221,60 @@
             </div>
           </div>
         </div>
-        <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
+        <editor apiKey="test" [init]="{plugins: 'link'}"></editor> -->
 
         <!-- <app-calendar></app-calendar> -->
 
         <!-- favorite component -->
+
+        <!-- <div class="table-wrapper m-tb-10">
+          <div class="tootlbar-header toolbar-padding">
+            <ul class="no-styles un-list btn-flex btn-icon-list">
+              <li>
+                <button class="btn btn-sm"><i class="material-icons icon-30">close</i></button>
+              </li>
+              <li>
+                <button class="btn btn-sm"><i class="material-icons icon-30">edit</i></button>
+              </li>
+              <li>
+                <button class="btn btn-sm"><i class="material-icons icon-30">save</i></button>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="title">Subject</a>
+              </li>
+            </ul>
+          </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
 
 
       </div>

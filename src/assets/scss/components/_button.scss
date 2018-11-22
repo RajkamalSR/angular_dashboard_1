@@ -5,6 +5,7 @@
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   background: $white;
+  
 
   @include element("submit") {
     width: 100%;
@@ -79,4 +80,9 @@
 
 .b-navbar-overlay {
   display: none !important;
+}
+
+.btn-important{
+  background-image: linear-gradient(to right, #ff5722 0%, #f56032 100%);
+  color: #fff;
 }
