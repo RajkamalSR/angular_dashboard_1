@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
 import "dhtmlx-scheduler";
-import { } from "@types/dhtmlxscheduler";
+
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -14,8 +14,8 @@ export class CalendarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    scheduler.config.container_autoresize = false;
-    scheduler.init(this.schedulerContainer.nativeElement, new Date());
+    // scheduler.config.container_autoresize = false;
+    // scheduler.init(this.schedulerContainer.nativeElement, new Date());
 
   }
 }
