@@ -1,0 +1,21 @@
+.table td,
+.table th {
+    padding: 0.2rem;
+    border-top: 1px solid #f9f9f9;
+}
+
+.table td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table {
+    .img-sm {
+        width: 24px;
+        margin: 0 8px;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.logo {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.brand__logo {
+    color: $white;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}

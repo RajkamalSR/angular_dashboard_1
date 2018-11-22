@@ -1,4 +1,5 @@
 @import "./assets/scss/utils/variables";
+
 .btn {
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -13,27 +14,69 @@
   }
 }
 
-.form {
-  @include element("buttons") {
-	@include d-flex(flex, space-evenly);
-	position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 
-    > .btn.btn-primary {
-      flex: 1;
-      margin: 0 4px;
-    }
+.btn-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-    > .btn.btn-primary:first-child {
-      margin-left: 0 !important;
-    }
+.btn.btn-transparent {
+  background: transparent;
+}
 
-    > .btn.btn-primary:last-child {
-      margin-right: 0 !important;
-    }
+.btn-transparent {
+  background: transparent !important;
+}
+
+.buttons {
+  border: none;
+  background: #fff;
+}
+
+.btn-sm {
+  font-size: 12px;
+}
+
+.btn-round {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.56);
+}
+
+.btn.btn-important {
+  background: rgb(255, 87, 34);
+  color: #fff;
+}
+
+.btn-flex {
+  .btn {
+      display: flex;
+      min-height: 26px;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 12px;
   }
+}
+
+.btn {
+  outline: none;
+}
+
+.btn-icon-list {
+  .btn {
+      padding: 0;
+  }
+}
+
+.a-button {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.b-navbar-overlay {
+  display: none !important;
 }

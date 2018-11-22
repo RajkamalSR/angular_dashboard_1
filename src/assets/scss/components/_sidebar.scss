@@ -1,0 +1,25 @@
+
+.sidebar {
+    position: fixed;
+    width: 252px;
+    background: #f9f9f9;
+    top: 0;
+    height: 100%;
+    left: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 9999;
+}
+
+.sidebar-open {
+    .header,
+    .main-wrapper {
+        padding-left: 252px;
+    }
+    .header.fixed-top {
+        left: 252px;
+        padding-left: 0px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+}

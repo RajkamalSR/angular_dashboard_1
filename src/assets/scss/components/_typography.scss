@@ -1,0 +1,15 @@
+.title {
+    font-weight: bold;
+    color: #333;
+    max-width: 92px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.para-1 {
+    padding: 0 15px;
+    margin: 8px 0;
+    line-height: 1.5rem;
+}
